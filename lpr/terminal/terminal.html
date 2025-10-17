@@ -1,0 +1,5242 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.2">
+    
+    
+      
+        <title>LPR Integrado ao Terminal - Parking Plus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.24c991ad.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/wps-config-avancadas.css">
+    
+    
+      
+
+
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lpr-integrado-ao-terminal" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../index.html" title="Parking Plus" class="md-header__button md-logo" aria-label="Parking Plus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Parking Plus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LPR Integrado ao Terminal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent=""  aria-label="Tema Escuro"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Tema Escuro" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent=""  aria-label="Tema Claro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Tema Claro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Parking Plus" class="md-nav__button md-logo" aria-label="Parking Plus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Parking Plus
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../requisitos/index.html">Requisitos</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Requisitos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Requisitos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../requisitos/servidor-debian/index.html">Servidor Debian</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Servidor Debian" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Servidor Debian
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/servidor-debian/pkplus-cli.html" class="md-nav__link">
+        pkplus-cli
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/servidor-debian/demais-pacotes.html" class="md-nav__link">
+        Demais pacotes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ppm/index.html">Parking Plus Manager</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Parking Plus Manager" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Parking Plus Manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppm/configuracoes_avancadas.html" class="md-nav__link">
+        Configurações Avançadas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppm/controle_entradas_semanais.html" class="md-nav__link">
+        Controle Limite de Entradas Semanais
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppm/alertas.html" class="md-nav__link">
+        Alertas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppm/acesso_avulso_manual_virtual.html" class="md-nav__link">
+        Acesso Virtual de Avulsos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ppc/index.html">Parking Plus Caixa</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Parking Plus Caixa" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Parking Plus Caixa
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Impressoras
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Impressoras" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Impressoras
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppc/impressoras/bematech_mp4200th/bematech_mp4200th.html" class="md-nav__link">
+        Bematech MP-4200 TH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppc/impressoras/Custom_P3L/Custom_P3L.html" class="md-nav__link">
+        Custom P3L
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppc/permitir_cancelamento_pgto_tag3.html" class="md-nav__link">
+        Permitir cancelar pgto TAG3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppc/valores_diferenciados_ticket_perdido.html" class="md-nav__link">
+        Valores diferenciados para Ticket Perdido
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppc/controle_vagas/controle_vagas.html" class="md-nav__link">
+        Controle de disponibilização de Vagas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          TEF
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TEF" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          TEF
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tef/caixa/index.html">Caixa</a>
+          
+            <label for="__nav_5_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Caixa" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Caixa
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tef/caixa/sitef_caixa.html" class="md-nav__link">
+        Sitef
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tef/caixa/adyen_caixa.html" class="md-nav__link">
+        Adyen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tef/caixa/fiserv_uy_caixa.html" class="md-nav__link">
+        FiservUY
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tef/epa/index.html">EPA</a>
+          
+            <label for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="EPA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          EPA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tef/epa/sitef_epa.html" class="md-nav__link">
+        Sitef
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tef/epa/adyen_epa.html" class="md-nav__link">
+        Adyen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tef/epa/fiserv_uy_epa.html" class="md-nav__link">
+        FiservUY
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tef/pptefapi.html" class="md-nav__link">
+        PPTEFAPI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ppt/index.html">Parking Plus Terminal</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Parking Plus Terminal" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Parking Plus Terminal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/imagens_tipo_acesso/imagens_tipo_acesso.html" class="md-nav__link">
+        Imagens do Tipo de Acesso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/layouts.html" class="md-nav__link">
+        Layouts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/midiapark.html" class="md-nav__link">
+        MidiaPark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" data-md-state="indeterminate" type="checkbox" id="__nav_6_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ppt/tapgo/index.html">Tap&GO</a>
+          
+            <label for="__nav_6_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tap&GO" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tap&GO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/tapgo/daemon.html" class="md-nav__link">
+        vlib-daemon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/tapgo/descontos.html" class="md-nav__link">
+        Descontos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/fidelizados_lpr.html" class="md-nav__link">
+        Fidelizados Enterprise por LPR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/terminal_hibrido.html" class="md-nav__link">
+        Terminal de Saída Híbrida
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/ticket_virtual.html" class="md-nav__link">
+        Impressão de Tickets Virtuais
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" data-md-state="indeterminate" type="checkbox" id="__nav_6_9" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_9">
+          Cancelamento de Ticket por timeout
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cancelamento de Ticket por timeout" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          Cancelamento de Ticket por timeout
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/cancelamento_ticket/cancelamento_ticket.html" class="md-nav__link">
+        Cancelamento de Tickets por Timeout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/cancelamento_ticket/ticketless.html" class="md-nav__link">
+        Cancelamento Ticketless
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" data-md-state="indeterminate" type="checkbox" id="__nav_6_10" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ppt/tag3/index.html">Tag3</a>
+          
+            <label for="__nav_6_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tag3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_10">
+          <span class="md-nav__icon md-icon"></span>
+          Tag3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/tag3/rog3.html" class="md-nav__link">
+        Reserva Online
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/tag3/avancadas.html" class="md-nav__link">
+        Ajustes finos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppt/relay_lpr.html" class="md-nav__link">
+        Relay de Leituras LPR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ppvoip/index.html">Parking Plus VoIP/Intercom</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Parking Plus VoIP/Intercom" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Parking Plus VoIP/Intercom
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppvoip/ppvoip_intercom.html" class="md-nav__link">
+        VoIP/Intercom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppvoip/ppvoip_cores.html" class="md-nav__link">
+        Ajuste de Cores
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../epa/index.html">Parking Plus EPA</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Parking Plus EPA" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Parking Plus EPA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" data-md-state="indeterminate" type="checkbox" id="__nav_8_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../epa/dispositivos/index.html">Dispositivos</a>
+          
+            <label for="__nav_8_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Dispositivos" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dispositivos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_8_2_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../epa/dispositivos/impressoras/index.html">Impressoras</a>
+          
+            <label for="__nav_8_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Impressoras" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Impressoras
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/dispositivos/impressoras/IT433TD.html" class="md-nav__link">
+        Impressora Diebold IT433TD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/dispositivos/impressoras/CustomVkp803.html" class="md-nav__link">
+        Impressora CUSTOM VKP 80 III
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/IntegracaoTicketPerdido.html" class="md-nav__link">
+        Integração Ticket Perdido / Leitura de Documentos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/abonofaturasaldoexcedente.html" class="md-nav__link">
+        Faturar Pagamento de Valor Excedente com Cartão de Abono
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" data-md-state="indeterminate" type="checkbox" id="__nav_8_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../epa/midiapark/index.html">MidiaPark</a>
+          
+            <label for="__nav_8_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="MidiaPark" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          MidiaPark
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/midiapark/configuracoes/configuracoes.html" class="md-nav__link">
+        Configurações
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/midiapark/servico_midiapark/servico_midiapark.html" class="md-nav__link">
+        Serviço MidiaPark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/midiapark/requisitos_parkingplus_midia_viewer/requisitos_parkingplus_midia_viewer.html" class="md-nav__link">
+        Requisitos para criar um ParkingPlus Midia Viewer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/vendadeservicos.html" class="md-nav__link">
+        Venda de Serviços
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_7" data-md-state="indeterminate" type="checkbox" id="__nav_8_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8_7">
+          Vending Machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vending Machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_7">
+          <span class="md-nav__icon md-icon"></span>
+          Vending Machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/vendingmachine.html" class="md-nav__link">
+        Vending Machine - Pague Fácil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/vendingmachine/vendingmachine_vendas.html" class="md-nav__link">
+        Venda de Produtos/TAGs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/vendingmachine/vendingmachine_cortesias.html" class="md-nav__link">
+        Entrega de Cortesias/TAGFree
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/vendingmachine/vendingmachine_manutencao.html" class="md-nav__link">
+        Manuteção Modulo TDC - EPA/PF
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/impressao_tickets.html" class="md-nav__link">
+        Impressão de Tickets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/exibicao_qrcode.html" class="md-nav__link">
+        Exibição de Qrcode para pagamento
+      </a>
+    </li>
+  
+
+            
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/promocoes/promocoes.html" class="md-nav__link">
+        Promoções Enterprise(Mobile)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epa/vendadeingressos/vendadeingressos.html" class="md-nav__link">
+        Venda de Ingressos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../painel_manobra/index.html">Painel de Manobras</a>
+          
+            <label for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Painel de Manobras" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Painel de Manobras
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../painel_manobra/pre_requisitos.html" class="md-nav__link">
+        Pré-Requisitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" data-md-state="indeterminate" type="checkbox" id="__nav_9_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9_3">
+          Serviços
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Serviços" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Serviços
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../painel_manobra/servico_back_end.html" class="md-nav__link">
+        Back-End
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../painel_manobra/servico_front_end.html" class="md-nav__link">
+        Front-End
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../painel_manobra/servidor.html" class="md-nav__link">
+        Servidor PXE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../painel_manobra/cadastro_paineis.html" class="md-nav__link">
+        Configurar / Cadastrar Painel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../painel_manobra/configuracoes.html" class="md-nav__link">
+        Configurações Gerais por Estações
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" data-md-state="indeterminate" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../hardware/index.html">Hardware</a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Hardware" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Hardware
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/upb.html" class="md-nav__link">
+        UPB
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" data-md-state="indeterminate" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../servicos/index.html">Serviços</a>
+          
+            <label for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Serviços" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Serviços
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicos/pplf.html" class="md-nav__link">
+        PPLF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicos/ppls.html" class="md-nav__link">
+        PPLS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicos/ppregistrasetor.html" class="md-nav__link">
+        PPRegistraSetor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicos/vops.html" class="md-nav__link">
+        VOPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ppde/importacao_ppde.html" class="md-nav__link">
+        Importação(PPDE)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicos/PPTarifadorConsole.html" class="md-nav__link">
+        PPTarifadorConsole
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" data-md-state="indeterminate" type="checkbox" id="__nav_12" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Integracões
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integracões" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Integracões
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_1" data-md-state="indeterminate" type="checkbox" id="__nav_12_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../integracoes/osa_informatizado/index.html">Integrações OSAs Informatizado</a>
+          
+            <label for="__nav_12_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Integrações OSAs Informatizado" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_1">
+          <span class="md-nav__icon md-icon"></span>
+          Integrações OSAs Informatizado
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_1_2" data-md-state="indeterminate" type="checkbox" id="__nav_12_1_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../integracoes/osa_informatizado/semparar/index.html">Integração Sem Parar Informatizado</a>
+          
+            <label for="__nav_12_1_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Integração Sem Parar Informatizado" data-md-level="3">
+        <label class="md-nav__title" for="__nav_12_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Integração Sem Parar Informatizado
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/osa_informatizado/semparar/informatizado_semparar_v1.html" class="md-nav__link">
+        Sem Parar Informatizado v1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/osa_informatizado/semparar/informatizado_semparar_v2_AuCloud.html" class="md-nav__link">
+        Sem Parar Informatizado v2 AuCloud
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/osa_informatizado/conectcar.html" class="md-nav__link">
+        Integração Conectcar Informatizado
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/osa_informatizado/greenpass/greenpass.html" class="md-nav__link">
+        Integração GreenPass Informatizado
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/estapar_porto_seguro_api/estapar_porto_seguro_api.html" class="md-nav__link">
+        Integração Estapar/Porto Seguro API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/vending_machine_semparar_api/vending_machine_semparar_api.html" class="md-nav__link">
+        Integração Vending Machine / Sem Parar API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/integracao_envio_dados_garagem/integracao_envio_dados_garagem.html" class="md-nav__link">
+        Integração Envio Dados Garagem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_5" data-md-state="indeterminate" type="checkbox" id="__nav_12_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../validacaotickets/index.html">Serviço Web para Integração com Hipermercados</a>
+          
+            <label for="__nav_12_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Serviço Web para Integração com Hipermercados" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_5">
+          <span class="md-nav__icon md-icon"></span>
+          Serviço Web para Integração com Hipermercados
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../validacaotickets/cartao_evento/cartao_evento.html" class="md-nav__link">
+        Médoto gerarCartaoEvento
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_6" data-md-state="indeterminate" type="checkbox" id="__nav_12_6" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../integracoes/active_directory/index.html">Active Directory</a>
+          
+            <label for="__nav_12_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Active Directory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_6">
+          <span class="md-nav__icon md-icon"></span>
+          Active Directory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integracoes/active_directory/ldap.html" class="md-nav__link">
+        LDAP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" data-md-state="indeterminate" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Carteiras Digitais
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Carteiras Digitais" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Carteiras Digitais
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../carteiras_digitais/conectcar.html" class="md-nav__link">
+        Carteira Digital Conectcar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../carteiras_digitais/semparar.html" class="md-nav__link">
+        Carteira Digital Sem Parar
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../index.html">LPR</a>
+          
+            <label for="__nav_14">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="LPR" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          LPR
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concentrador.html" class="md-nav__link">
+        WPS LPR Concentrador
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          LPR Integrado ao Terminal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="terminal.html" class="md-nav__link md-nav__link--active">
+        LPR Integrado ao Terminal
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracoes" class="md-nav__link">
+    Configurações
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qualidade" class="md-nav__link">
+    Qualidade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pumatronix" class="md-nav__link">
+    Pumatronix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webserver" class="md-nav__link">
+    WebServer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao" class="md-nav__link">
+    Comunicação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coringas" class="md-nav__link">
+    Coringas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeouts" class="md-nav__link">
+    Timeouts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracoes-avancadas" class="md-nav__link">
+    Configurações Avançadas
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurações Avançadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr" class="md-nav__link">
+    Seção: LPR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr-somente-pumatronix" class="md-nav__link">
+    Seção: LPR (Somente Pumatronix)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr-assistido-entrada" class="md-nav__link">
+    Seção: LPR ASSISTIDO ENTRADA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr-assistido-saida" class="md-nav__link">
+    Seção: LPR ASSISTIDO SAIDA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-log_telemetria_lpr" class="md-nav__link">
+    Seção: LOG_TELEMETRIA_LPR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caixa/caixa.html" class="md-nav__link">
+        LPR Integrado ao Caixa(Acesso por placa)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lpr_por_veiculo.html" class="md-nav__link">
+        LPR por tipo de veículo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" data-md-state="indeterminate" type="checkbox" id="__nav_14_6" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../ticketless/index.html">Ticketless</a>
+          
+            <label for="__nav_14_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Ticketless" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_6">
+          <span class="md-nav__icon md-icon"></span>
+          Ticketless
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ticketless/manobrista_ticketless.html" class="md-nav__link">
+        Acesso de Manobrista Ticketless
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ticketless/acesso_timeout.html" class="md-nav__link">
+        Acesso Automático Ticketless por Timeout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ticketless/impressao_ticketless.html" class="md-nav__link">
+        Impressão de Acesso Ticketless
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lpr_acesso_simultaneo.html" class="md-nav__link">
+        Timeout por Acesso Simultâneo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" data-md-state="indeterminate" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Funcionalidades
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Funcionalidades" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Funcionalidades
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionalidades/pesquisa_de_satisfacao/pesquisadesatisfacao.html" class="md-nav__link">
+        Pesquisa de Satisfação
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionalidades/descontos/cartao_credito_debito/cartao_credito_debito.html" class="md-nav__link">
+        Validação de Desconto por Cartão de Crédito/Débito
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionalidades/credito_externo/credito_externo.html" class="md-nav__link">
+        Venda de Crédito Externo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionalidades/wps_360/wps360.html" class="md-nav__link">
+        WPS 360
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionalidades/descontos/acesso_premiado/acesso_premiado.html" class="md-nav__link">
+        Desconto por Acesso Premiado
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" data-md-state="indeterminate" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../problemas/index.html">Identificando Problemas</a>
+          
+            <label for="__nav_16">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Identificando Problemas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          Identificando Problemas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problemas/logs.html" class="md-nav__link">
+        Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problemas/coredump.html" class="md-nav__link">
+        Core Dumps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracoes" class="md-nav__link">
+    Configurações
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qualidade" class="md-nav__link">
+    Qualidade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pumatronix" class="md-nav__link">
+    Pumatronix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webserver" class="md-nav__link">
+    WebServer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao" class="md-nav__link">
+    Comunicação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coringas" class="md-nav__link">
+    Coringas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeouts" class="md-nav__link">
+    Timeouts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracoes-avancadas" class="md-nav__link">
+    Configurações Avançadas
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurações Avançadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr" class="md-nav__link">
+    Seção: LPR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr-somente-pumatronix" class="md-nav__link">
+    Seção: LPR (Somente Pumatronix)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr-assistido-entrada" class="md-nav__link">
+    Seção: LPR ASSISTIDO ENTRADA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-lpr-assistido-saida" class="md-nav__link">
+    Seção: LPR ASSISTIDO SAIDA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secao-log_telemetria_lpr" class="md-nav__link">
+    Seção: LOG_TELEMETRIA_LPR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="lpr-integrado-ao-terminal"><abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> Integrado ao Terminal</h1>
+<h2 id="configuracoes">Configurações</h2>
+<p><a class="glightbox" href="config_lpr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="config_lpr.png" /></a></p>
+<ul>
+<li><strong>Ativar <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>:</strong> Utilizar <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>(license plate recognition) neste terminal</li>
+<li><strong>Tipo <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>:</strong> Tipo do <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> integrado (Quercus/Aimetis)</li>
+<li><strong>CodeKey:</strong> Gerar/Alterar licença codekey para uso do recurso <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> no terminal</li>
+<li><strong>Registrar Imagem do Acesso:</strong> Salvar a imagem do momento do acesso</li>
+<li><strong>Ativar pesquisa de placa com coringa:</strong> Complementar a "Bloquear saída com placa inconsistente", permite que a placa reconhecida na saida tenha até 1 caracter diferente da placa reconhecida na entrada</li>
+<li><strong>Validar placas Cred./Mens. pelo pátio (Saída):</strong> Não permite que um ticket seja utilizado na saída por uma placa diferente da entrada (Credenciados e mensalistas)</li>
+<li><strong>Bloquear saída com placa inconsistente:</strong> Não permite que um ticket 
+seja utilizado na saída por uma placa diferente da entrada (Avulso, credenciados e mensalistas)</li>
+<li><strong>Identificar credenciado na entrada pela placa <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>:</strong> Identifica credenciado/mensalista pela placa vinda da <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> (<a href="../ticketless/index.html">ticketless</a>)</li>
+<li><strong>Confrontar Placa do Acesso Avulso Anterior:</strong> Quando ativo, as entradas de avulso irão ignorar uma leitura de placa que sejá idêntica
+ao acesso com sucesso anterior no mesmo terminal.</li>
+<li><strong>Permitir Acesso Rotativo Ticketless:</strong> Ativa/Desativa o Acesso <a href="../ticketless/index.html">Tickeless</a> no terminal</li>
+<li><strong>Permitir Acesso Reserva Online:</strong> Ativa/Desativa o Acesso por reservea online no terminal</li>
+<li><strong>Tempo de Exposição p/ Captura Imagem (us):</strong> Tempo de exposição em microssegundos para captura da imagem</li>
+</ul>
+<h5 id="qualidade">Qualidade</h5>
+<p><a class="glightbox" href="aba_qualidade.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="aba_qualidade.png" /></a></p>
+<ul>
+<li><strong>Uso Geral:</strong> Qualidade mínima de leitura aceita</li>
+<li><strong>Acesso Ticketless:</strong> Qualidade mínima aceita para acesso ticketless</li>
+</ul>
+<h5 id="pumatronix">Pumatronix</h5>
+<p><a class="glightbox" href="aba_pumatronix.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="aba_pumatronix.png" /></a></p>
+<ul>
+<li><strong>Ativar Serviço de Leitura Contínua:</strong> Quando ativo, o terminal deixará de comunicar diretamente com a câmera para passar a
+utilizar o Serviço Pumatronix que esta embarcado no Terminal</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>É aconselhavel ativar a chave avançada <code>CONFRONTAR PLACA ACESSO ANTERIOR - AVULSO</code> em conjunto com esse serviço.</p>
+</div>
+<ul>
+<li><strong>Ativar LOG do Serviço:</strong> Ativa/Desativa o log do serviço</li>
+<li><strong>Tempo de vida da leitura (segundos):</strong> É o tempo em segundos que o serviço Pumatronix irá considerar a última leitura antes de retornar placa em branco aos triggers</li>
+</ul>
+<h5 id="webserver"><a name="webserver">WebServer</a></h5>
+<p><a class="glightbox" href="aba_webserver.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="aba_webserver.png" /></a></p>
+<ul>
+<li><strong>URL Serviço:</strong> Receberá o caminho do serviço. Se foi informado um end point nesse campo, o sistema considerá que estamos optando por salvar as imagens fora do banco de dados.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>Nesse caso, mesmo que de erro ao salvar as imagens no WebServer, ou se o WebServer estiver Offline, o sistema não irá salvar a imagem em banco de dados.</p>
+</div>
+<ul>
+<li><strong>Usuário:</strong> O nome do usuário conforme informado no arquivo de configuração do serviço.</li>
+<li><strong>Senha:</strong> A senha do usuário conforme informado no arquivo de configuração do serviço.</li>
+</ul>
+<h5 id="comunicacao">Comunicação</h5>
+<p><a class="glightbox" href="aba_comunicacao.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="aba_comunicacao.png" /></a></p>
+<ul>
+<li><strong>IP Camera <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>:</strong> IP da câmera</li>
+<li><strong>Porta <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>:</strong> Porta UDP ca câmera</li>
+<li><strong>Porta <abbr title="Parking Plus Terminal">PPT</abbr>:</strong> Porta UDP do servidor</li>
+<li><strong>UnitID <abbr title="Parking Plus Terminal">PPT</abbr>:</strong> Identificador Quercus</li>
+</ul>
+<h5 id="coringas">Coringas</h5>
+<p><a class="glightbox" href="aba_coringas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="aba_coringas.png" /></a></p>
+<ul>
+<li><strong>Coringa:</strong> Caractere coringa que será utilizado na identificação das placas</li>
+<li><strong>Limite Entrada:</strong> Quantidade de caracteres coringa permitidos na leitura de entrada</li>
+<li><strong>Limite Saída:</strong> Quantidade de caracteres coringa permitidos na leitura de saída</li>
+<li><strong>Limite TicketLess/Reserva:</strong> Quantidade de caracteres coringa permitidos no acesso ticketless</li>
+</ul>
+<h5 id="timeouts">Timeouts</h5>
+<p><a class="glightbox" href="aba_timeouts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="aba_timeouts.png" /></a></p>
+<ul>
+<li><strong>Início Captura (ms):</strong> Tempo esperado para iniciar a captura da imagem</li>
+<li><strong>Captura (segs):</strong> Tempo esperado para captura de imagem</li>
+<li><strong>Reprocessamento Cred (segs):</strong> Tempo esperado para reprocessar um acesso de credenciado via <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr></li>
+</ul>
+<h2 id="configuracoes-avancadas">Configurações Avançadas</h2>
+<h3 id="secao-lpr">Seção: <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr></h3>
+<div class="wps-ca" id="cfg:LPR:ATIVO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:ATIVO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>ATIVO</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Ativar <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:QUALIDADEMINIMA">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:QUALIDADEMINIMA">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>QUALIDADE MINIMA</code></p>
+</td>
+<td>
+<p>Numérico</p>
+</td>
+<td>
+<p><code>79</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Uso Geral", na aba "<a href="#qualidade">Qualidade</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:ATIVARPESQUISADEPLACACOMCORINGA">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:ATIVARPESQUISADEPLACACOMCORINGA">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>ATIVAR PESQUISA DE PLACA COM CORINGA</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Ativar pesquisa de placa com coringa"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:BLOQUEARSAIDACOMPLACAINCONSISTENTE">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:BLOQUEARSAIDACOMPLACAINCONSISTENTE">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>BLOQUEARSAIDACOMPLACAINCONSISTENTE</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Bloquear saída com placa inconsistente"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:CAPTURADEIMAGEMTEMPOEXPOSICAOUS">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:CAPTURADEIMAGEMTEMPOEXPOSICAOUS">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>CAPTURA DE IMAGEM: TEMPO EXPOSICAO (US)</code></p>
+</td>
+<td>
+<p>Micro-segundos</p>
+</td>
+<td>
+<p><code>25000</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Tempo de Exposição p/ Captura Imagem (us)"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:CARACTERCORINGA">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:CARACTERCORINGA">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>CARACTER CORINGA</code></p>
+</td>
+<td>
+<p>Caractere</p>
+</td>
+<td>
+<p><code>?</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Coringa", na aba "<a href="#coringas">Coringas</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:CONFRONTARPLACAACESSOANTERIOR-AVULSO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:CONFRONTARPLACAACESSOANTERIOR-AVULSO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>CONFRONTAR PLACA ACESSO ANTERIOR - AVULSO</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Confrontar Placa do Acesso Avulso Anterior"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:IDENTIFICACREDENCIADOPORPLACALPR">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:IDENTIFICACREDENCIADOPORPLACALPR">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>IDENTIFICA CREDENCIADO POR PLACA LPR</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Identificar credenciado na entrada pela placa <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:NUMERODECARACTERESCORINGASAIDA">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:NUMERODECARACTERESCORINGASAIDA">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>NUMERO DE CARACTERES CORINGA (SAIDA)</code></p>
+</td>
+<td>
+<p>Quantidade</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Limite saída", na aba "<a href="#coringas">Coringas</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:NUMEROMAXIMOCARACTERESCORINGA">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:NUMEROMAXIMOCARACTERESCORINGA">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>NUMERO MAXIMO CARACTERES CORINGA</code></p>
+</td>
+<td>
+<p>Quantidade</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Limite entrada", na aba "<a href="#coringas">Coringas</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:NUMEROMAXIMOCARACTERESINVALIDOS">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:NUMEROMAXIMOCARACTERESINVALIDOS">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>NUMERO MAXIMO CARACTERES INVALIDOS</code></p>
+</td>
+<td>
+<p>Quantidade</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Quantidade de caracteres inválidos permitidos na leitura</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:REGISTRARIMAGENS">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:REGISTRARIMAGENS">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>REGISTRAR IMAGENS</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Salva todas as imagens recebidas no banco de dados.</p>
+<div class="admonition danger atenção">
+<p class="admonition-title">Danger</p>
+<p>Não deixe esta função ativada ou haverá sobrecarga do banco de dados.
+Use somente para homologação.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:REGISTRARIMAGENS-WEBSERVER">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:REGISTRARIMAGENS-WEBSERVER">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>REGISTRAR IMAGENS - WEBSERVER</code></p>
+</td>
+<td>
+<p>URL</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "URL Serviço", na aba "<a href="#webserver">WebServer</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:REGISTRARIMAGENS-WEBSERVERUSERNAME">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:REGISTRARIMAGENS-WEBSERVERUSERNAME">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>REGISTRAR IMAGENS - WEBSERVER USERNAME</code></p>
+</td>
+<td>
+<p>Texto</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Usuário", na aba "<a href="#webserver">WebServer</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:REGISTRARIMAGENS-WEBSERVERPASSWORD">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:REGISTRARIMAGENS-WEBSERVERPASSWORD">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>REGISTRAR IMAGENS - WEBSERVER PASSWORD</code></p>
+</td>
+<td>
+<p>Texto</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Senha", na aba "<a href="#webserver">WebServer</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:REGISTRARIMAGENS-FOTODOACESSO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:REGISTRARIMAGENS-FOTODOACESSO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>REGISTRAR IMAGENS - FOTO DO ACESSO</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Quando esta chave estiver ativa a foto do acesso será registrada na tabela
+<code>imagenslpr</code>, junto com o ticket e terminal correspondentes.</p>
+<p>Se o <a href="#cfg:LPR:REGISTRARIMAGENS-WEBSERVER">WebServer</a> estiver ativo, esta configuração também precisa estar
+ativa para que seja possível ver as fotos de veículos no pátio via <abbr title="Parking Plus Manager">PPM</abbr>.</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:REGISTRARIMAGENS-FOTODOACESSONALOT">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:REGISTRARIMAGENS-FOTODOACESSONALOT">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>REGISTRAR IMAGENS - FOTO DO ACESSO NA LOT</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>1</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Só têm efeito se o <a href="#cfg:LPR:REGISTRARIMAGENS-WEBSERVER">WebServer</a> não estiver ativo.</p>
+<p>Quando ativada, salva imagens do acesso na tabela <code>lot</code>. Essas imagens
+serão apagadas quando o cliente sair do pátio.</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:TIMEOUTMS">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:TIMEOUTMS">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>TIMEOUT (MS)</code></p>
+</td>
+<td>
+<p>Milissegundos</p>
+</td>
+<td>
+<p><code>2000</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Captura", na aba "<a href="#timeouts">Timeouts</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:TIMEOUTACESSOSIMULTANEOLPRPARAMSMPLACASEG">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:TIMEOUTACESSOSIMULTANEOLPRPARAMSMPLACASEG">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>TIMEOUT ACESSO SIMULTANEO LPR PARA MSM PLACA (SEG)</code></p>
+</td>
+<td>
+<p>Segundos</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Tempo de espera após ser feito qualquer acesso permitido para ser utilizados
+em outras estações.</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:TIMEOUTINICIOCAPTURAMS">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:TIMEOUTINICIOCAPTURAMS">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>TIMEOUT INICIO CAPTURA(MS)</code></p>
+</td>
+<td>
+<p>Milissegundos</p>
+</td>
+<td>
+<p><code>1000</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Início Captura (ms)", na aba "<a href="#timeouts">Timeouts</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:TIMEOUTREPROCESSAMENTOACESSOCREDENCIADO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:TIMEOUTREPROCESSAMENTOACESSOCREDENCIADO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>TIMEOUT REPROCESSAMENTO ACESSO CREDENCIADO</code></p>
+</td>
+<td>
+<p>Segundos</p>
+</td>
+<td>
+<p><code>7</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Reprocessamento Cred (segs)", na aba "<a href="#timeouts">Timeouts</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:PERMITIRACESSORESERVAONLINE">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:PERMITIRACESSORESERVAONLINE">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>PERMITIR ACESSO RESERVA ONLINE</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Permitir Acesso Reserva Online"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:VALIDARPLACASCREDMENSPELOPATIOSAIDA">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:VALIDARPLACASCREDMENSPELOPATIOSAIDA">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>VALIDAR PLACAS CRED/MENS PELO PATIO (SAIDA)</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Validar Placas Cred./Mens. pelo patio (Saída)"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:PESQUISAPLACAINCONSISTENTE">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:PESQUISAPLACAINCONSISTENTE">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>PESQUISA PLACA INCONSISTENTE</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Ativa/Desativa a busca por placas inconsistentes</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:IPCAMERALPR">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:IPCAMERALPR">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>IP CAMERA LPR</code></p>
+</td>
+<td>
+<p>Endereço IP</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "IP Camera <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>", na aba "<a href="#comunicacao">Comunicação</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:PORTAUDPLPR">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:PORTAUDPLPR">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>PORTA UDP LPR</code></p>
+</td>
+<td>
+<p>Porta UDP</p>
+</td>
+<td>
+<p><code>7056</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Porta <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>", na aba "<a href="#comunicacao">Comunicação</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:PORTAUDPSERVIDOR">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:PORTAUDPSERVIDOR">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>PORTA UDP SERVIDOR</code></p>
+</td>
+<td>
+<p>Porta UDP</p>
+</td>
+<td>
+<p><code>7057</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Porta <abbr title="Parking Plus Terminal">PPT</abbr>", na aba "<a href="#comunicacao">Comunicação</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:UNITID">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:UNITID">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>UNITID</code></p>
+</td>
+<td>
+<p>Numérico</p>
+</td>
+<td>
+<p><code>33</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "UnitID <abbr title="Parking Plus Terminal">PPT</abbr>", na aba "<a href="#comunicacao">Comunicação</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:MENSAGEMCAPTURANDOPLACALINHA1">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:MENSAGEMCAPTURANDOPLACALINHA1">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>MENSAGEM CAPTURANDO PLACA LINHA1</code></p>
+</td>
+<td>
+<p>Texto</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Primeira linha da mensagem exibida no terminal no momento da captura da placa</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:MENSAGEMCAPTURANDOPLACALINHA2">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:MENSAGEMCAPTURANDOPLACALINHA2">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>MENSAGEM CAPTURANDO PLACA LINHA2</code></p>
+</td>
+<td>
+<p>Texto</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Segunda linha da mensagem exibida no terminal no momento da captura da placa</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:HABILITARACESSOOPENGOLPR">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:HABILITARACESSOOPENGOLPR">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>HABILITAR ACESSO OPENGO LPR</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Ao ativar essa chave o terminal irá tentar fazer acesso de OpenGo com <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr>.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="secao-lpr-somente-pumatronix">Seção: <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> (Somente Pumatronix)</h3>
+<div class="wps-ca" id="cfg:LPR:ATIVARSERVIÇODELEITURACONTÍNUAPUMATRONIX">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:ATIVARSERVIÇODELEITURACONTÍNUAPUMATRONIX">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>ATIVAR SERVIÇO DE LEITURA CONTÍNUA PUMATRONIX</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Ativar Serviço de Leitura Contínua" da aba "<a href="#pumatronix">Pumatronix</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:ATIVARLOGPARASERVIÇODELEITURACONTÍNUAPUMATRONIX">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:ATIVARLOGPARASERVIÇODELEITURACONTÍNUAPUMATRONIX">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>ATIVAR LOG PARA SERVIÇO DE LEITURA CONTÍNUA PUMATRONIX</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao Checkbox "Ativar LOG do Serviço" na aba "<a href="#pumatronix">Pumatronix</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPR:TEMPOLEITURAPARASERVIÇODELEITURACONTÍNUAPUMATRONIX">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPR:TEMPOLEITURAPARASERVIÇODELEITURACONTÍNUAPUMATRONIX">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR</code></p>
+</td>
+<td>
+<p><code>TEMPO LEITURA PARA SERVIÇO DE LEITURA CONTÍNUA PUMATRONIX</code></p>
+</td>
+<td>
+<p>Segundos</p>
+</td>
+<td>
+<p><code>4</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Corresponde ao campo "Tempo de vida da leitura (segundos)" da aba "<a href="#pumatronix">Pumatronix</a>"</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="secao-lpr-assistido-entrada">Seção: <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> ASSISTIDO ENTRADA</h3>
+<div class="wps-ca" id="cfg:LPRASSISTIDOENTRADA:ATIVO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPRASSISTIDOENTRADA:ATIVO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR ASSISTIDO ENTRADA</code></p>
+</td>
+<td>
+<p><code>ATIVO</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Ativa/Inativa o processamento <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> Assistido na Entrada</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPRASSISTIDOENTRADA:AIMETISATIVO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPRASSISTIDOENTRADA:AIMETISATIVO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR ASSISTIDO ENTRADA</code></p>
+</td>
+<td>
+<p><code>AIMETIS ATIVO</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Ativa/Inativa o <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> Aimetis(não utilizado com concentrador)</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="secao-lpr-assistido-saida">Seção: <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> ASSISTIDO SAIDA</h3>
+<div class="wps-ca" id="cfg:LPRASSISTIDOSAIDA:ATIVO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPRASSISTIDOSAIDA:ATIVO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR ASSISTIDO SAIDA</code></p>
+</td>
+<td>
+<p><code>ATIVO</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Ativa/Inativa o processamento <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> Assistido na Saída</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="wps-ca" id="cfg:LPRASSISTIDOSAIDA:AIMETISATIVO">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LPRASSISTIDOSAIDA:AIMETISATIVO">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LPR ASSISTIDO SAIDA</code></p>
+</td>
+<td>
+<p><code>AIMETIS ATIVO</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Ativa/Inativa o <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> Aimetis(não utilizado com concentrador)</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="secao-log_telemetria_lpr">Seção: LOG_TELEMETRIA_LPR</h3>
+<div class="wps-ca" id="cfg:LOG_TELEMETRIA_LPR:ATIVAR">
+<table>
+<tr>
+<th>
+<p>Seção</p>
+</th>
+<th>
+<p>Chave</p>
+</th>
+<th>
+<p>Tipo</p>
+</th>
+<th>
+<p>Padrão</p>
+<a class="wps-ca" href="#cfg:LOG_TELEMETRIA_LPR:ATIVAR">#</a></th>
+</tr>
+<tr>
+<td>
+<p><code>LOG_TELEMETRIA_LPR</code></p>
+</td>
+<td>
+<p><code>ATIVAR</code></p>
+</td>
+<td>
+<p>Booleano</p>
+</td>
+<td>
+<p><code>0</code></p>
+</td>
+</tr>
+<tr>
+<th class="wps-ca wps-ca_details" colspan="4">
+<p>Descrição</p>
+</th>
+</tr>
+<tr>
+<td colspan="4">
+<p>Ativa ou não a geração de logs de teletria de <abbr title="License Plate Recognition. Esta tecnologia é uma especialização de OCR para detectar e ler placas de veículos em fotos ou video de cameras na pista de acesso, geralmente em tempo real.">LPR</abbr> na tabela
+<code>monitoramento_telemetria_lpr</code>. Desativado por padrão.</p>
+<p>Só ative se a garagem tiver monitoramento remoto ativo, caso contrário
+os registros não serão consumidos, eventualmente lotando o banco.</p>
+</td>
+</tr>
+</table>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Rodapé">
+      
+        
+        <a href="../concentrador.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: WPS LPR Concentrador" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              WPS LPR Concentrador
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../caixa/caixa.html" class="md-footer__link md-footer__link--next" aria-label="Próximo: LPR Integrado ao Caixa(Acesso por placa)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              LPR Integrado ao Caixa(Acesso por placa)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; WPS Brasil Ltda. Todos os Direitos Reservados.
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.sections", "navigation.expand", "navigation.tracking"], "translations": {"clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.placeholder": "Digite para iniciar a busca", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.term.missing": "Ausente", "select.version.title": "Selecione a vers\u00e3o"}, "search": "../../assets/javascripts/workers/search.e99e714c.min.js", "version": {"provider": "mike"}}</script>
+    
+
+<script src="../../assets/javascripts/iframe-worker.js"></script>
+<script src="../../search/search_index.js"></script>
+
+
+    
+      <script src="../../assets/javascripts/bundle.bc35569b.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
