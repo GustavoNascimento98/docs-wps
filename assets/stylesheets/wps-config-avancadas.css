@@ -1,0 +1,71 @@
+/* CSS Responsável pelo permalink */
+.wps-ca th {
+    position: relative;
+}
+.wps-ca a.wps-ca {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    min-width: 30px;
+    min-height: 30px;
+    border-width: 0 0 0.05rem 0.05rem;
+    border-style: solid;
+    border-color: var(--md-typeset-table-color);
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.wps-ca:hover a.wps-ca {
+    display: block;
+}
+
+/*
+  CSS para bordas e tamanho da tabela.
+
+  Em diversos pontos, duplica a classe .wps-ca e/ou inclui restrições
+  "desnecessárias" para tornas as nossas regras mais especificas (e preferidas)
+  em relação as regras do mkdocs-material.
+
+  @see https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+*/
+.wps-ca.wps-ca table {
+    display: table;
+}
+.wps-ca .md-typeset__table {
+    width: 100%;
+}
+.wps-ca.wps-ca th>:first-child {
+    margin: 0;
+}
+.wps-ca.wps-ca table:not([class]) th.wps-ca_details {
+    border-top: 0.05rem solid var(--md-typeset-table-color);
+}
+.wps-ca.wps-ca table:not([class]) td, .wps-ca.wps-ca table:not([class]) th {
+    border-top: 0px;
+    padding: 0.5em 1.25em;
+}
+.wps-ca td, .wps-ca th {
+    border-right: 0.05rem solid var(--md-typeset-table-color);
+}
+.wps-ca.wps-ca tr>:last-child {
+    border-right: 0px; /* Evita borda duplicada no ultimo elemento */
+}
+
+/* CSS para diferenciar configurações deprecated */
+.wps-ca.wps-ca_obsolete * {
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0.9;
+}
+.wps-ca.wps-ca_obsolete:hover * {
+    opacity: 1;
+}
+
+/* CSS para banners */
+.md-typeset .wps-ca_banner .admonition-title {
+    margin: 0;
+}
+.wps-ca.wps-ca table:not([class]) td.wps-ca_banner {
+    padding: 0;
+}
